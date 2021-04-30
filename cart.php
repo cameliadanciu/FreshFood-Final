@@ -53,7 +53,17 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                                   foreach($_SESSION["cart"] as $keys => $values){
                                     ?>
                                     <tr>
-                                      <td><img src="images/images.png" style="width: 100px"></td>
+                                      <!-- <td><img src="images/images.jpg" style="width: 100px"></td> -->
+                                      
+
+                                      <?php
+
+                                        $image = 'images/'.$values["name"].'.jpg';
+
+                                        echo '<td><img src="'.$image.'" style="width: 100px"></td>';
+                                        ?>
+
+
                                       <td><?php echo $values["name"]; ?></td>
                                       <td><?php echo $values["quantity"]; ?></td>
                                       <td>£ <?php echo $values["price"]; ?></td>
