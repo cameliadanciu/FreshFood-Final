@@ -26,7 +26,7 @@ $query = 'SELECT *,concat(`C_FNAME`," ",`C_LNAME`)as name,delivery_date,C_PNUMBE
    
             <div class="card-header">
               <div style="margin-bottom: 30px">
-             <center><h2>Agri-Trading</h2><p style="font-size: 20px">Brgy.Enclaro Binalbagan City <br> Negros Occidental</p></center>
+             <center><h2>Fresh Food</h2><p style="font-size: 20px">Choose organic & ethically sourced food</p></center>
          </div>
               <?php if ($stat == 'Confirmed') {
                 ?>
@@ -69,8 +69,8 @@ $query = 'SELECT *,concat(`C_FNAME`," ",`C_LNAME`)as name,delivery_date,C_PNUMBE
                             echo '<td>'. $row['product_name'].'</td>';                     
                             echo '<td>'. $row['date'].'</td>';
                             echo '<td>'. $row['qty'].'</td>';
-                            echo '<td>&#8369 '. $row['price'].'</td>';
-                            echo '<td>&#8369 '. $row['total'].'</td>';
+                            echo '<td>£ '. $row['price'].'</td>';
+                            echo '<td>£ '. $row['total'].'</td>';
                            /* echo '<td>  ';
                             echo '<center> <a  type="button" class="btn btn-lg btn-info fas fa-cart-plus" href="addtransacdetail.php?action=edit & id='.$row['transac_id'] . '"></a> </td></center>';*/
                             echo '</tr> ';
@@ -92,16 +92,16 @@ $query = 'SELECT * FROM tbltransacdetail
 
                                 <tr>
                                   <td colspan="4" align="right"><br><h5> Subtotal :</h5></td>
-                                  <td ><br><h5> &#8369 <?php echo $zz-150; ?></h5></td>
+                                  <td ><br><h5> £ <?php echo $zz-15; ?></h5></td>
                                 </tr>
                                 <tr>
                                   <td colspan="4" align="right"><h5> Delivery Fee :</h5></td>
-                                  <td ><h5> &#8369 150</h5></td>
+                                  <td ><h5> £ 15</h5></td>
                                   
                                 </tr>
                                   <tr>
                                   <td colspan="4" align="right"><h5> Total :</h5></td>
-                                  <td ><h5> &#8369 <?php echo $zz; ?></h5></td>
+                                  <td ><h5> £ <?php echo $zz; ?></h5></td>
                                 </tr>
 
                             </table>
@@ -120,14 +120,14 @@ $query = 'SELECT * FROM tbltransacdetail
 
                             <p> Sincerely.</p>
 
-                           <h4>Agri-Trading</h4>
+                           <h4>Fresh Food</h4>
                            <?php }else{
 
                            } ?>
                         </div>
             </div>
         
-        <!--   <h5 align="right" style="margin-right: : 150px">Total Price : &#8369 <?php echo $zz; ?></h5> -->
+        <!--   <h5 align="right" style="margin-right: : 150px">Total Price : £ <?php echo $zz; ?></h5> -->
           </div>
 
 

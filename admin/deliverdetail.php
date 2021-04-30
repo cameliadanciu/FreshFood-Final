@@ -54,8 +54,8 @@ $query = 'SELECT *,concat(`C_FNAME`," ",`C_LNAME`)as name,`C_PNUMBER`,`C_ADDRESS
                             echo '<td>'. $row['product_name'].'</td>';                     
                             echo '<td>'. $row['date'].'</td>';
                             echo '<td>'. $row['qty'].'</td>';
-                            echo '<td>&#8369 '. $row['price'].'</td>';
-                            echo '<td>&#8369 '. $row['total'].'</td>';
+                            echo '<td>£ '. $row['price'].'</td>';
+                            echo '<td>£ '. $row['total'].'</td>';
                            /* echo '<td>  ';
                             echo '<center> <a  type="button" class="btn btn-lg btn-info fas fa-cart-plus" href="addtransacdetail.php?action=edit & id='.$row['transac_id'] . '"></a> </td></center>';*/
                             echo '</tr> ';
@@ -75,15 +75,15 @@ $query = 'SELECT * FROM tbltransacdetail
 
             <tr>
                                   <td colspan="4" align="right"><br><h5> Subtotal :</h5></td>
-                                  <td ><br><h5> &#8369 <?php echo $zz-150; ?></h5></td>
+                                  <td ><br><h5> £ <?php echo $zz-150; ?></h5></td>
                                 </tr>
                                 <tr>
                                   <td colspan="4" align="right"><h5> Delivery Fee :</h5></td>
-                                  <td ><h5> &#8369 150</h5></td>
+                                  <td ><h5> £ 150</h5></td>
                                 </tr>
                                   <tr>
                                   <td colspan="4" align="right"><h5> Total :</h5></td>
-                                  <td ><h5> &#8369 <?php echo $zz; ?></h5></td>
+                                  <td ><h5> £ <?php echo $zz; ?></h5></td>
                                 </tr>
                                     
                                 </tbody>

@@ -77,7 +77,7 @@ if ($_SESSION['zero']==1) {
          <center><img src="images/images.png" style="width: 100px">
          <h4 class="text-info"><?php echo $row["product_name"]; ?></h4>
          <h5 class="text-info">Available Qty:(<?php echo $row["available"]; ?>)</h5>
-         <h4 class="text-danger">&#8369 <?php echo $row["selling_price"]; ?>.00</h4>
+         <h4 class="text-danger">£ <?php echo $row["selling_price"]; ?>.00</h4>
        <input class="form-control" type="hidden" placeholder="Quantity" name="quant" value="1">
        <input class="form-control" type="hidden" name="av" value="<?php echo $row["available"]; ?>">
        <input class="form-control" type="hidden" name="hiddenname" value="<?php echo $row["product_name"]; ?>">
