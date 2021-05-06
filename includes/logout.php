@@ -2,7 +2,7 @@
 
 session_start();
 session_destroy();
-/*session_unset($_SESSION['cid']);
+/* session_unset($_SESSION['cid']);
 session_unset($_SESSION['cuser']);
 session_unset($_SESSION['email']);
 session_unset($_SESSION['fname']);

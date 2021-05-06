@@ -21,12 +21,27 @@ if ($av > 0) {
      'price' => $_POST["hiddenprice"],
      'quantity' => $_POST["quant"]);
      $_SESSION["cart"][$count] = $itemarray;
-    echo "<script>alert('Product is added to your cart!')</script>";
-    echo "<script>window.location = 'cart.php'</script>";
   }else{
-    echo "<script>alert('Item Already Added')</script>";
-    echo "<script>window.location = 'cart.php'</script>";
+
+    $currentQty = 0;
+
+    foreach ($_SESSION["cart"] as $keys => $values) {
+      if ($values['ids']==$_GET["id"]) {
+          $currentQty = $values['quantity'];
+          unset($_SESSION["cart"][$keys]);
+      }
+    }
+
+    $itemarray = array(
+      'ids' => $_GET["id"],
+      'name' => $_POST["hiddenname"],
+      'price' => $_POST["hiddenprice"],
+      'quantity' => $_POST["quant"] + $currentQty);
+      $_SESSION["cart"][$count] = $itemarray;
+
   }
+  echo "<script>alert('Product is added to your cart!')</script>";
+  echo "<script>window.location = 'cart.php'</script>";
 }
 else
 {

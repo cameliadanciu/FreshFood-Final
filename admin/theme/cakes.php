@@ -22,7 +22,17 @@ $qq = $_POST["quant"];
     echo "<script>alert('Product is added to your cart!')</script>";
     echo "<script>window.location = 'index.php'</script>";
   }else{
-    echo "<script>alert('Item Already Added')</script>";
+	   
+	$count=count($_SESSION["cart"]);
+    $itemarray = array(
+     'ids' => $_GET["id"],
+     'name' => $_POST["hiddenname"],
+     'price' => $_POST["hiddenprice"],
+     'quantity' => $_POST["quant"]+1);
+     $_SESSION["cart"][$count] = $itemarray;
+	  echo "<script>alert('Product is added to your cart!')</script>";
+	  // 'quantity' =>$_POST["quant"][$id] 
+    //echo "<script>alert('Item Already Added')</script>";
     echo "<script>window.location = 'index.php'</script>";
   }
 }

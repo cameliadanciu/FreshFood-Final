@@ -1,10 +1,10 @@
 <?php
-    // The same dapat ang input name sa Add kag Update.....WHAT THE MEN!!! 
      include('../includes/connection.php');
      if (isset($_POST['submit'])) {
 
 		if ($_GET['action'] == 'add') {	
 		$product = $_POST['product'];
+		$imagepath =$_POST['imagepath'];
 		$quantity = $_POST['quantity'];
 		$price = $_POST['price'];
 		$markup = $_POST['markup'];
@@ -30,8 +30,9 @@
             	$code = $_POST['code'];
 				$date = $_POST['date'];
 				$user = $_POST['user'];
-            	$query = "INSERT INTO `tblproducts`(`product_name`, `quantity`, `price`, `profit`, `date_in`, `category_id`, `supplier_id`, `user_id`, `product_code`, `status`)
-				VALUES ('".$product."','".$quantity."','".$price."','".$markup."','".$date."','".$category."','".$supplier."','".$user."','".$code."','Available')";
+				$imagepath =$_POST['imagepath'];
+            	$query = "INSERT INTO `tblproducts`(`product_name`, `quantity`, `price`, `profit`, `date_in`, `category_id`, `supplier_id`, `user_id`, `product_code`, `status` ,`imagepath`)
+				VALUES ('".$product."','".$quantity."','".$price."','".$markup."','".$date."','".$category."','".$supplier."','".$user."','".$code."','Available','".$imagepath."')";
 				mysqli_query($db,$query)or die (mysqli_error($db));
 				$sql = "UPDATE `tblautonumber` SET `end`=`end`+`increment` WHERE `desc` = 'PROD'";
 				mysqli_query($db,$sql)or die (mysqli_error($db));
@@ -40,6 +41,8 @@
 				alert("Successfully added.");
 				window.location = "product.php";
 				</script>
+				
+				
 				<?php
 		}			
 		}if ($_GET['action'] == 'update') {
@@ -48,6 +51,7 @@
 		$markup = $_POST['markup'];
 		$category = $_POST['category'];
 		$supplier = $_POST['supplier'];
+		$imagepath =$_POST['imagepath'];
 			$id = $_POST['id'];
 			if ($product == "") {
               header("Location: productupdate.php?required=product&id=".$id."");
@@ -60,7 +64,7 @@
             }elseif ($supplier == "") {
               header("Location: productupdate.php?required=supplier&id=".$id."");  
             }else{
-            	$query = 'UPDATE tblproducts set product_name ="'.$product.'", price="'.$price.'",
+            	$query = 'UPDATE tblproducts set product_name ="'.$product.'", price="'.$price.'",imagepath="'.$imagepath.'",
 					profit ="'.$markup.'",`category_id`="'.$category.'",`supplier_id`="'.$supplier.'" WHERE product_code ="'.$id.'"';
 				mysqli_query($db, $query) or die(mysqli_error($db));
 				
