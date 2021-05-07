@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 30, 2021 at 06:42 PM
+-- Generation Time: May 07, 2021 at 07:05 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -102,7 +102,8 @@ INSERT INTO `tblcustomer` (`C_ID`, `C_FNAME`, `C_LNAME`, `C_AGE`, `C_ADDRESS`, `
 (1, 'Joken', 'Villanueva', 30, 'Enclaro, Binalbagan', '09096798565', 'Male', 'Joken@yahoo.com', '6100', 'j', '$2y$10$0COwfAt8Yy6JTR2omeq5sOfdaKrFtVzh8C3a5WbP8intcwDG5H.Xm'),
 (2, 'gladez', 'Jimenez', 23, 'Brgy.9 Isabela', '09096787453', 'Female', 'glad@yahoo.com', '6100', 'gladez', '$2y$10$sZU0lDPm3UdWQz.8lPhuQexh.uW3Dt0D.i8SeHRTD2cuzn4egCpfG'),
 (3, 'Lenny', 'Jane', 23, 'Brgy.Santol Binalbagan', '09097865342', 'Female', 'Lenny@yahoo.com', '6100', 'Lenny', '$2y$10$nAIowngDF/uUOWi5G2FCru4RsbVAeliVqYLUIQ9E3Y2h.hEO1dt3u'),
-(4, 'Lara', 'Croft', 25, '1 High Street', '0123456789', 'Female', 'lara@gmail.com', '123456', 'laraCroft', '$2y$10$AsGU0gIlLHcYuNotQHj2auBw.Z2vFdLdftxa9LL6HqlDW7sXrXOem');
+(4, 'Lara', 'Croft', 25, '1 High Street', '0123456789', 'Female', 'lara@gmail.com', '123456', 'laraCroft', '$2y$10$AsGU0gIlLHcYuNotQHj2auBw.Z2vFdLdftxa9LL6HqlDW7sXrXOem'),
+(5, 'user1', 'user1', 20, 'user1', '12345', 'Male', 'user1@user1.com', 'user1', 'user1', '$2y$10$mpqUCl6AeVFwoRAb4Mw8H.th3AZ6XdUFWBHjUqEZ6sj20XzeMJ6fq');
 
 -- --------------------------------------------------------
 
@@ -177,35 +178,34 @@ CREATE TABLE `tblproducts` (
   `user_id` int(11) NOT NULL,
   `product_code` varchar(11) NOT NULL,
   `status` varchar(200) NOT NULL,
-  `imagepath` varchar(200)
-
+  `imagepath` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblproducts`
 --
 
-INSERT INTO `tblproducts` (`product_id`, `product_name`, `quantity`, `price`, `profit`, `date_in`, `category_id`, `supplier_id`, `user_id`, `product_code`, `status`) VALUES
-(1, 'Galla Apples', 499, '2.50', '1.10', '2019-11-21', 1, 2, 1, '1009', 'Available'),
-(2, 'Pink Lady Apples', 593, '3.50', '1.90', '2019-11-21', 1, 2, 1, '1010', 'Available'),
-(3, 'Cucumbers', 599, '1.70', '0.78', '2019-11-21', 3, 3, 1, '1011', 'Available'),
-(4, 'Broccoli', 500, '1.80', '0.69', '2019-11-21', 3, 1, 1, '1012', 'Available'),
-(5, 'Spring Onions', 495, '1.50', '0.60', '2019-11-21', 3, 1, 1, '1013', 'Available'),
-(6, 'Radish', 400, '1.80', '0.78', '2019-11-21', 3, 2, 1, '1014', 'Available'),
-(7, 'Strawberries', 60, '2.60', '1.15', '2019-11-22', 1, 2, 2, '1015', 'Available'),
-(8, 'Pears', 100, '2.20', '0.99', '2019-11-28', 1, 1, 2, '1016', 'Available'),
-(9, 'Lettuce', 150, '1.40', '0.60', '2021-04-26', 3, 2, 1, '1017', 'Available'),
-(10, 'Basmati rice', 60, '2.80', '1.00', '2021-04-26', 2, 2, 1, '1018', 'Available'),
-(11, 'Beef Tomatoes', 200, '0.85', '0.30', '2021-04-26', 3, 2, 1, '1019', 'Available'),
-(12, 'Carrots', 300, '2.30', '0.85', '2021-04-26', 3, 1, 1, '1020', 'Available'),
-(13, 'Cauliflower', 155, '2.10', '0.90', '2021-04-26', 3, 2, 1, '1021', 'Available'),
-(14, 'Spinach', 244, '2.70', '1.00', '2021-04-26', 3, 1, 1, '1022', 'Available'),
-(15, 'Courgette', 111, '2.50', '1.00', '2021-04-26', 3, 2, 1, '1023', 'Available'),
-(16, 'Red Onions', 168, '1.55', '0.62', '2021-04-26', 3, 3, 1, '1024', 'Available'),
-(17, 'Garlic', 130, '0.60', '0.20', '2021-04-26', 3, 2, 1, '1025', 'Available'),
-(18, 'Aubergine', 98, '1.50', '0.55', '2021-04-26', 3, 2, 1, '1026', 'Available'),
-(19, 'Pineapple', 82, '3.30', '1.25', '2021-04-26', 1, 1, 1, '1027', 'Available'),
-(20, 'Brown rice', 200, '3.99', '1.70', '2021-04-26', 2, 2, 1, '1028', 'Available');
+INSERT INTO `tblproducts` (`product_id`, `product_name`, `quantity`, `price`, `profit`, `date_in`, `category_id`, `supplier_id`, `user_id`, `product_code`, `status`, `imagepath`) VALUES
+(1, 'Galla Apples', 499, '2.50', '1.10', '2019-11-21', 1, 2, 1, '1009', 'Available', 'images/Galla Apples.jpg'),
+(2, 'Pink Lady Apples', 590, '3.50', '1.90', '2019-11-21', 1, 2, 1, '1010', 'Available', 'images/Pink Lady Apples.jpg'),
+(3, 'Cucumbers', 599, '1.70', '0.78', '2019-11-21', 3, 3, 1, '1011', 'Available', 'images/Cucumbers.jpg'),
+(4, 'Broccoli', 500, '1.80', '0.69', '2019-11-21', 3, 1, 1, '1012', 'Available', 'images/Broccoli.jpg'),
+(5, 'Spring Onions', 495, '1.50', '0.60', '2019-11-21', 3, 1, 1, '1013', 'Available', 'images/Spring Onions.jpg'),
+(6, 'Radish', 400, '1.80', '0.78', '2019-11-21', 3, 2, 1, '1014', 'Available', 'images/Radish.jpg'),
+(7, 'Strawberries', 60, '2.60', '1.15', '2019-11-22', 1, 2, 2, '1015', 'Available', 'images/Strawberries.jpg'),
+(8, 'Pears', 100, '2.20', '0.99', '2019-11-28', 1, 1, 2, '1016', 'Available', 'images/Pears.jpg'),
+(9, 'Lettuce', 150, '1.40', '0.60', '2021-04-26', 3, 2, 1, '1017', 'Available', 'images/Lettuce.jpg'),
+(10, 'Basmati rice', 60, '2.80', '1.00', '2021-04-26', 2, 2, 1, '1018', 'Available', 'images/Basmati rice.jpg'),
+(11, 'Beef Tomatoes', 200, '0.85', '0.30', '2021-04-26', 3, 2, 1, '1019', 'Available', 'images/Beef Tomatoes.jpg'),
+(12, 'Carrots', 300, '2.30', '0.85', '2021-04-26', 3, 1, 1, '1020', 'Available', 'images/Carrots.jpg'),
+(13, 'Cauliflower', 155, '2.10', '0.90', '2021-04-26', 3, 2, 1, '1021', 'Available', 'images/Cauliflower.jpg'),
+(14, 'Spinach', 244, '2.70', '1.00', '2021-04-26', 3, 1, 1, '1022', 'Available', 'images/Spinach.jpg'),
+(15, 'Courgette', 111, '2.50', '1.00', '2021-04-26', 3, 2, 1, '1023', 'Available', 'images/Courgette.jpg'),
+(16, 'Red Onions', 168, '1.55', '0.62', '2021-04-26', 3, 3, 1, '1024', 'Available', 'images/Red Onions.jpg'),
+(17, 'Garlic', 130, '0.60', '0.20', '2021-04-26', 3, 2, 1, '1025', 'Available', 'images/Garlic.jpg'),
+(18, 'Aubergine', 98, '1.50', '0.55', '2021-04-26', 3, 2, 1, '1026', 'Available', 'images/Aubergine.jpg'),
+(19, 'Pineapple', 82, '3.30', '1.25', '2021-04-26', 1, 1, 1, '1027', 'Available', 'images/Pineapple.jpg'),
+(20, 'Brown rice', 200, '3.99', '1.70', '2021-04-26', 2, 2, 1, '1028', 'Available', 'images/Brown rice.jpg');
 
 -- --------------------------------------------------------
 
@@ -311,7 +311,8 @@ INSERT INTO `tbltransac` (`transac_id`, `transac_code`, `date`, `customer_id`, `
 (87, 1619712658, '2021-04-29', 4, '1013', 1, '1.50', '1.50'),
 (88, 1619712658, '2021-04-29', 4, '1023', 1, '2.50', '2.50'),
 (89, 1619796537, '2021-04-30', 4, '1010', 1, '3.50', '3.50'),
-(90, 1619796537, '2021-04-30', 4, '1011', 1, '1.70', '1.70');
+(90, 1619796537, '2021-04-30', 4, '1011', 1, '1.70', '1.70'),
+(91, 1620405792, '2021-05-07', 5, '1010', 3, '3.50', '10.50');
 
 -- --------------------------------------------------------
 
@@ -343,10 +344,11 @@ INSERT INTO `tbltransacdetail` (`detail_id`, `transac_code`, `date`, `customer_i
 (4, 1575872572, '2019-12-09 00:00:00.000000', 1, 15, '', '21150.00', 'Pending', '', '2019-12-10 00:00:00.000000'),
 (5, 1575873091, '2019-12-09 00:00:00.000000', 1, 15, '', '22650.00', 'Pending', '', '2019-12-10 00:00:00.000000'),
 (6, 1576051349, '2019-12-11 00:00:00.000000', 1, 15, '', '11650.00', 'Pending', '', '2019-06-20 00:00:00.000000'),
-(7, 1619709708, '2021-04-29 00:00:00.000000', 4, 15, '', '166.00', 'Pending', '', '2021-05-01 00:00:00.000000'),
-(8, 1619712008, '2021-04-29 00:00:00.000000', 4, 15, '', '159.50', 'Pending', '', '2021-05-03 00:00:00.000000'),
+(7, 1619709708, '2021-04-29 00:00:00.000000', 4, 15, '', '166.00', 'Cancelled', 'Your order has been cancelled <br>\r\n	 due to lack of communication <br> and incomplete informatio!', '2021-05-01 00:00:00.000000'),
+(8, 1619712008, '2021-04-29 00:00:00.000000', 4, 15, '', '159.50', 'Cancelled', 'Your order has been cancelled <br>\r\n	 due to lack of communication <br> and incomplete informatio!', '2021-05-03 00:00:00.000000'),
 (9, 1619712658, '2021-04-29 00:00:00.000000', 4, 15, '', '22.50', 'Pending', '', '2021-04-30 00:00:00.000000'),
-(10, 1619796537, '2021-04-30 00:00:00.000000', 4, 15, '', '20.20', 'Pending', '', '2021-04-30 00:00:00.000000');
+(10, 1619796537, '2021-04-30 00:00:00.000000', 4, 15, '', '20.20', 'Pending', '', '2021-04-30 00:00:00.000000'),
+(11, 1620405792, '2021-05-07 00:00:00.000000', 5, 15, '', '25.50', 'Confirmed', 'Your order has been confirmed!', '2021-05-06 00:00:00.000000');
 
 -- --------------------------------------------------------
 
@@ -473,7 +475,7 @@ ALTER TABLE `tblcategory`
 -- AUTO_INCREMENT for table `tblcustomer`
 --
 ALTER TABLE `tblcustomer`
-  MODIFY `C_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `C_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbldelivery`
@@ -503,13 +505,13 @@ ALTER TABLE `tblsupplier`
 -- AUTO_INCREMENT for table `tbltransac`
 --
 ALTER TABLE `tbltransac`
-  MODIFY `transac_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `transac_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT for table `tbltransacdetail`
 --
 ALTER TABLE `tbltransacdetail`
-  MODIFY `detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
