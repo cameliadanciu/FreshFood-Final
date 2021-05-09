@@ -5,6 +5,7 @@ footer.sticky-footer {
   bottom: 0;
   width: calc(100% - #{$sidebar-collapsed-width});
   height: $sticky-footer-height;
+  font-family: Arial;
   background-color: $gray-200;
   .copyright {
     line-height: 1;
