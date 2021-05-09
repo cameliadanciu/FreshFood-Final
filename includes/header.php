@@ -33,7 +33,6 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top" style="">
 
       <a class="navbar-brand mr-1" href="index.php">Fresh Food</a>
-      <img src = "images/ images no Background.png" alt="FreshFoods" width = "15%" height = "10%">
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
