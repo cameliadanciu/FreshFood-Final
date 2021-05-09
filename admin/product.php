@@ -27,6 +27,7 @@ include 'theme/sidebar.php';
                                         <th>Supplier</th>
                                         <th>Encoder</th>
                                         <th>Status</th>
+										<th>Path</th>
                                         <th>Update</th>
                                     </tr>
                                 </thead>
@@ -50,6 +51,8 @@ include 'theme/sidebar.php';
                             echo '<td>'. $row['supplier_name'].'</td>';
                             echo '<td>'. $row['name'].'</td>';
                             echo '<td>'. $row['status'].'</td>';
+							echo '<td>'. $row['imagepath'].'</td>';
+							
                              echo '<td>  ';
                       
 

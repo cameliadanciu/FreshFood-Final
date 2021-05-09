@@ -49,8 +49,8 @@
                                       <td><?php echo $values["name"]; ?></td>
                                        <td><?php echo $date; ?></td>
                                       <td><?php echo $values["quantity"]; ?></td>
-                                      <td>&#8369 <?php echo $values["price"]; ?></td>
-                                      <td>&#8369 <?php echo $values["quantity"] * $values["price"]; ?></td>
+                                      <td>£ <?php echo $values["price"]; ?></td>
+                                      <td>£ <?php echo $values["quantity"] * $values["price"]; ?></td>
                                     </tr>
                                     <?php 
                                     $name= $values["name"];
@@ -107,19 +107,19 @@
                             <h5>Subtotal</h5><br>
                             </div>                            
                             <div align="right" class="col-lg-4">
-                            <h5>&#8369 <?php echo $_SESSION['mm']; ?></h5><br>
+                            <h5>£ <?php echo $_SESSION['mm']; ?></h5><br>
                             </div> 
                             <div class="col-lg-7" >
                             <h5>Delivery fee</h5><br>
                             </div> 
                             <div align="right" class="col-lg-4">
-                            <h5>&#8369 150</h5><br>
+                            <h5>£ 15</h5><br>
                             </div>
                             <div class="col-lg-7">
                             <h5>Total</h5><br>
                             </div> 
                             <div align="right" class="col-lg-4">
-                            <h5>&#8369 <?php echo $_SESSION['mm']+150; ?></h5><br>
+                            <h5>£ <?php echo $_SESSION['mm']+15; ?></h5><br>
                             </div>                            
                             </div>
                             <center><button type="submit" onclick="return confirm('Do you want to submit order?')" class="btn btn-lg btn-success">Submit Order</button></center>
