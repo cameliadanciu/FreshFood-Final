@@ -56,7 +56,7 @@ else{
                             echo '<td>'. $row['date'].'</td>';
                             echo '<td>'. $row['delivery_date'].'</td>';
                             echo '<td>'. $row['pay_met'].'</td>';
-                            echo '<td>&#8369 '. $row['totalprice'].'</td>';
+                            echo '<td>£'. $row['totalprice'].'</td>';
                             echo '<td>'. $row['status'].'</td>';
                             echo '<td>'. $row['remarks'].'</td>';
                             echo '<td>  ';

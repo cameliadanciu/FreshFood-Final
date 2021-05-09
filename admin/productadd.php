@@ -65,6 +65,9 @@ $autonum = $r['autonum'];
                             <div class="form-group">
                               <input class="form-control" type="number" id="price" placeholder="Price" name="price">
                             </div>
+							<div class="form-group">
+                              <input class="form-control" type="text" id="imagepath" placeholder="Imagepath" name="imagepath">
+                            </div>
                             <div class="form-group">
                               <input class="form-control" type="number" id="price" placeholder="Markup" name="markup">
                             </div>

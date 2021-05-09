@@ -22,7 +22,7 @@ if($_GET["action"]=='adds') {
      mysqli_query($db,$sql)or die(mysqli_error($db));
   }
   //Save Transaction Detail 
-  $query3 = "INSERT INTO tbltransacdetail(transac_code,date,customer_id,deliveryfee,pay_met,totalprice,status,delivery_date)VALUES('".$tat."','".$date."','".$_SESSION['cid']."',150,'".$met."','".$_SESSION['mm']."'+150,'Pending','".$del."')";
+  $query3 = "INSERT INTO tbltransacdetail(transac_code,date,customer_id,deliveryfee,pay_met,totalprice,status,delivery_date)VALUES('".$tat."','".$date."','".$_SESSION['cid']."',15,'".$met."','".$_SESSION['mm']."'+15,'Pending','".$del."')";
  mysqli_query($db,$query3)or die(mysqli_error($db)); 
 
 

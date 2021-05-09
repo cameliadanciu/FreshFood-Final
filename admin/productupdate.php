@@ -21,6 +21,7 @@ $query = 'SELECT *,category,supplier_name FROM `tblproducts`a inner join `tblcat
                $c_id = $row['category_id'];
                $supplier = $row['supplier_name'];
                $s_id = $row['supplier_id'];
+			   $imagepath = $row['imagepath'];
               }              
               $id = $_GET['id'];
 $query1 = "SELECT * FROM tblcategory";
@@ -58,6 +59,10 @@ $result2 = mysqli_query($db,$query2);
                               <span>Product Name</span>
                               <input class="form-control" placeholder="Product Name" name="product" value="<?php echo $name; ?>">
                             </div>
+							 <div class="form-group">
+                              <span>Image path</span>
+                              <input class="form-control" placeholder="Imagepath" name="imagepath" value="<?php echo $imagepath; ?>">
+                            </div>
                             <!-- <div class="form-group">
                               <span>Add Quantity</span>
                               <input class="form-control" type="number" placeholder="Quantity" name="quantity" value="0">
@@ -86,6 +91,7 @@ $result2 = mysqli_query($db,$query2);
                             <?php while($row2 = mysqli_fetch_array($result2)):; ?>
                             <option value="<?php echo $row2[0]; ?>"><?php echo $row2[1]; ?></option>
                             <?php endwhile; ?>
+							
                             </select>
                             </div>
                             <button type="submit" name="submit" class="btn btn-info">Update</button>

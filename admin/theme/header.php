@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agri-Trading Online Shop</title>
+    <title>Fresh Foods </title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +32,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="index.php">Agri-Trading</a>
+      <a class="navbar-brand mr-1" href="index.php">Fresh Foods</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -62,10 +62,10 @@
              <?php 
      if (isset($_SESSION['userid'])) {
        if ($_SESSION['position']=='Admin'){
-      echo '<a class="nav-link " href="admin.php"><i class=" fas fa-user-circle" >'.$_SESSION['fname'].' '.$_SESSION['lname'].'</i></a>';
+      echo '<a class="nav-link " href="index.php"><i class=" fas fa-user-circle" >'.$_SESSION['fname'].' '.$_SESSION['lname'].'</i></a>';
       }
      }else{
-      echo '<a class="nav-link " href="admin.php"><i class="fas fa-user-alt ">Caren Bautista</i></a>';
+      echo '<a class="nav-link " href="admin.php"><i class="fas fa-user-alt ">Admin</i></a>';
      }
       ?>
 

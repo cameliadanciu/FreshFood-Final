@@ -53,11 +53,21 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                                   foreach($_SESSION["cart"] as $keys => $values){
                                     ?>
                                     <tr>
-                                      <td><img src="images/images.png" style="width: 100px"></td>
+                                      <!-- <td><img src="images/images.jpg" style="width: 100px"></td> -->
+                                      
+
+                                      <?php
+
+                                        $image = 'images/'.$values["name"].'.jpg';
+
+                                        echo '<td><img src="'.$image.'" style="width: 100px"></td>';
+                                        ?>
+
+
                                       <td><?php echo $values["name"]; ?></td>
                                       <td><?php echo $values["quantity"]; ?></td>
-                                      <td>&#8369 <?php echo $values["price"]; ?></td>
-                                      <td>&#8369 <?php echo $values["quantity"] * $values["price"]; ?></td>
+                                      <td>£ <?php echo $values["price"]; ?></td>
+                                      <td>£ <?php echo $values["quantity"] * $values["price"]; ?></td>
                                       <td><a class="btn btn-danger" type="button" onclick="return confirm('Are you sure?')" href="cart.php?action=delete&id=<?php echo $values["ids"]; ?>">Remove</a></td>
                                     </tr>
                                     <?php 
@@ -72,7 +82,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                              </tbody>
                              <tr>
                                <td colspan="4" align="right">Total Price</td>
-                                  <td align="left">&#8369 <?php echo $_SESSION['mm']; ?></td>
+                                  <td align="left">£ <?php echo $_SESSION['mm']; ?></td>
                                   <td><a type="button" class="btn btn-success" href="addprod.php" >Proceed and Checkout</a></td>
                              </tr>
                                <?php

@@ -49,6 +49,12 @@
             <i class="fas fa-fw fa-shopping-cart"></i>
             <span>Cart</span></a>
         </li>
+			 
+		<li class="nav-item">
+          <a title="Faq" class="nav-link" href="FAQ.php">
+            <i class="fas fa-fw fa-faq"></i>
+            <span>FAQ</span></a>
+        </li>	 
       </ul>
          <div id="content-wrapper">
 
