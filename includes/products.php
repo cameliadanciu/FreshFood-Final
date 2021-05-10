@@ -77,7 +77,17 @@ else
 <div class="row">
 
   <?php 
-  $query = "SELECT * FROM tblproducts WHERE quantity != 0 GROUP BY product_code";
+
+  if (empty($_GET['search']))
+  {
+    $query = "SELECT * FROM tblproducts WHERE quantity != 0 GROUP BY product_code";
+  }
+  else
+  {
+    $query = "SELECT * FROM tblproducts WHERE quantity != 0 && product_name like '%".$_GET['search']."%' GROUP BY product_code";
+  }
+
+
 $result = mysqli_query($db,$query);
 if (mysqli_num_rows($result)>0) 
 {
