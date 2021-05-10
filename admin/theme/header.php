@@ -62,10 +62,10 @@
              <?php 
      if (isset($_SESSION['userid'])) {
        if ($_SESSION['position']=='Admin'){
-      echo '<a class="nav-link " href="admin.php"><i class=" fas fa-user-circle" >'.$_SESSION['fname'].' '.$_SESSION['lname'].'</i></a>';
+      echo '<a class="nav-link " href="index.php"><i class=" fas fa-user-circle" >'.$_SESSION['fname'].' '.$_SESSION['lname'].'</i></a>';
       }
      }else{
-      echo '<a class="nav-link " href="admin.php"><i class="fas fa-user-alt ">Caren Bautista</i></a>';
+      echo '<a class="nav-link " href="admin.php"><i class="fas fa-user-alt ">Admin</i></a>';
      }
       ?>
 

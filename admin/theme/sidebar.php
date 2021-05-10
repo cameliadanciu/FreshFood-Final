@@ -49,23 +49,9 @@
             <span>Transaction</span></a>
         </li>
 
-         <li class="nav-item">
-          <a title="History" class="nav-link" href="history.php">
-            <i class="fas fa-fw fa-user-book"></i>
-            <span>History</span></a>
-        </li>
         
-         <li class="nav-item">
-          <a title="Reports" class="nav-link" href="reports.php">
-            <i class="fas fa-fw fa-user-tie"></i>
-            <span>Reports</span></a>
-        </li>
+        
          
-        <li class="nav-item">
-          <a title="Inventory" class="nav-link" href="productin.php">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Inventory</span></a>
-        </li>
 
       </ul>
          <div id="content-wrapper">
