@@ -94,13 +94,11 @@ if ($_SESSION['zero']==1) {
   <div class="card mb-3">
     <div class="card-body">
       <form method="post" action="index.php?action=add&id=<?php echo $row["product_code"]; ?>">
-          <center><!--<img src="images/images.png" style="width: 100px"> -->
+          <center>
 
          <?php $image = $row["imagepath"];
           echo '<td><img src="'.$image.'" style="width: 200px"></td>'; ?>
-		 
-		 
-		
+		 	
          <h4 class="text-info"><?php echo $row["product_name"]; ?></h4>
          <h5 class="text-info">Available Qty:(<?php echo $row["quantity"]; ?>)</h5>
          <h4 class="text-danger">£ <?php echo $row["price"]; ?></h4>

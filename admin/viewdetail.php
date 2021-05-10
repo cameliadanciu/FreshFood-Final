@@ -26,7 +26,7 @@ $query = 'SELECT *,concat(`C_FNAME`," ",`C_LNAME`)as name,delivery_date,C_PNUMBE
    
             <div class="card-header">
               <div style="margin-bottom: 30px">
-             <center><h2>Agri-Trading</h2><p style="font-size: 20px">Brgy.Enclaro Binalbagan City <br> Negros Occidental</p></center>
+             <center><h2>Fresh Food</h2><p style="font-size: 20px">Brgy.Enclaro Binalbagan City <br> Negros Occidental</p></center>
          </div>
               <?php if ($stat == 'Confirmed') {
                 ?>
