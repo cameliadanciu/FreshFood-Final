@@ -1,7 +1,7 @@
 <?php  
 if (isset($_POST['signups-submit'])) {
 
-require 'includes/connection.php';
+require 'connection.php';
 
 $C_FNAME = $_POST['C_FNAME'];
 $C_LNAME = $_POST['C_LNAME'];
