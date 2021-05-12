@@ -55,7 +55,7 @@ else{
                             echo '<td>'. $row['transac_code'].'</td>';                     
                             echo '<td>'. $row['date'].'</td>';
                             echo '<td>'. $row['delivery_date'].'</td>';
-                            echo '<td>'. $row['pay_met'].'</td>';
+                            echo '<td> Cash'. $row['pay_met'].'</td>';
                             echo '<td>£'. $row['totalprice'].'</td>';
                             echo '<td>'. $row['status'].'</td>';
                             echo '<td>'. $row['remarks'].'</td>';
