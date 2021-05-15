@@ -80,7 +80,28 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                              <tr>
                                <td colspan="4" align="right">Total Price</td>
                                   <td align="left">£ <?php echo $_SESSION['mm']; ?></td>
-                                  <td><a type="button" class="btn btn-success" href="addprod.php" >Proceed and Checkout</a></td>
+                                  <td><a type="button" class="btn btn-success" href="
+                                
+                                  
+                                  <?php
+                                  if(!isset($_SESSION["cid"])){
+                                  ?>
+                                  <?php
+                                    echo 'login.php'
+                                    ?>
+                                    <?php
+                                    }
+                                    else{
+                                    ?>
+                                    <?php
+                                    echo 'addprod.php'
+                                    ?>
+                                    <?php
+                                    }
+                                    ?> 
+                                  
+                                  " >Proceed and Checkout</a></td>
+                                  
                              </tr>
                                <?php
                                 }
