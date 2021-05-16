@@ -7,6 +7,7 @@
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
               <span>Copyright © Group 19 Website 2021</span>
+              <span>Contact Us: 07369874259 Email: FreshFoods@gmail.com</span>
             </div>
           </div>
         </footer>
